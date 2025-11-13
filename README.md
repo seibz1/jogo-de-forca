@@ -1,48 +1,38 @@
 # 😵 Jogo da Forca em C
 
-![Linguagem C](https://img.shields.io/badge/Linguagem-C-blue) ![Status](https://img.shields.io/badge/Status-Finalizado-green) ![License](https://img.shields.io/badge/License-MIT-yellow)
+![Linguagem C](https://img.shields.io/badge/Linguagem-C-00599C?style=for-the-badge&logo=c&logoColor=white) ![Status](https://img.shields.io/badge/Status-Concluído-brightgreen?style=for-the-badge)
 
-## 📝 Descrição
+## 📝 Sobre o Projeto
 
-[cite_start]Este projeto é uma implementação clássica do **Jogo da Forca** desenvolvida na linguagem C. O software foi criado como trabalho em grupo para a disciplina de **Algoritmos e Programação Estruturada**[cite: 6].
+Este repositório contém o projeto final da disciplina de **Algoritmos e Programação Estruturada**. O objetivo foi desenvolver um **Jogo da Forca** clássico utilizando a linguagem C, aplicando conceitos fundamentais como manipulação de arquivos, alocação de memória, ponteiros e modularização de código.
 
-O objetivo principal foi aplicar conceitos avançados da linguagem, como alocação de memória, manipulação de ponteiros, estruturação de código em múltiplos arquivos (`.c` e `.h`) e persistência de dados através da leitura e escrita em arquivos de texto.
+O diferencial deste projeto é o uso de um banco de dados de palavras externo (`.txt`), permitindo que o jogo seja expandido sem necessidade de recompilar o código.
 
 ## 🎮 Funcionalidades
 
-* [cite_start]**Seleção de Temas:** O jogador pode escolher entre 5 categorias de palavras[cite: 1]:
-    1.  [cite_start]Animais [cite: 7]
-    2.  [cite_start]Cores [cite: 2]
-    3.  [cite_start]Países ou Cidades [cite: 1]
-    4.  [cite_start]Frutas [cite: 300]
+* **Múltiplos Temas:** O usuário pode escolher entre 5 categorias:
+    1.  Animais
+    2.  Cores
+    3.  Países ou Cidades
+    4.  Frutas
     5.  Profissões
-* **Banco de Dados Dinâmico:** As palavras não estão "chumbadas" no código. O jogo lê arquivos `.txt` externos para sortear a palavra secreta.
-* [cite_start]**Sistema de Vidas:** O jogador possui um limite de 5 erros antes de ser "enforcado"[cite: 1].
-* [cite_start]**Adicionar Novas Palavras:** Ao final da partida, o usuário tem a opção de inserir uma nova palavra no banco de dados do tema escolhido, enriquecendo o jogo para as próximas partidas[cite: 1].
-* **Interface em Console:** Uso de arte ASCII para desenhar a forca e o feedback visual do jogo.
+* **Sistema de Vidas:** O jogador possui um limite máximo de 5 erros.
+* **Persistência de Dados:** As palavras são lidas de arquivos de texto.
+* **Adicionar Palavras:** Ao final da partida, é possível cadastrar uma nova palavra no tema escolhido, que ficará salva permanentemente para os próximos jogos.
+* **Interface Visual:** Feedback visual do boneco na forca utilizando caracteres ASCII.
 
-## 🛠️ Tecnologias e Bibliotecas
+## 📂 Estrutura de Arquivos
 
-O projeto utiliza as bibliotecas padrão do C e uma específica para ambiente Windows:
-
-* [cite_start]`stdio.h` (Entrada e saída) [cite: 1]
-* [cite_start]`stdlib.h` (Alocação e funções gerais) [cite: 1]
-* [cite_start]`string.h` (Manipulação de strings) [cite: 1]
-* [cite_start]`time.h` (Geração de sementes aleatórias) [cite: 1]
-* [cite_start]`ctype.h` (Tratamento de caracteres) [cite: 1]
-* [cite_start]`conio.h` (Para função `getch` - **Nota:** Biblioteca específica para Windows/MinGW)[cite: 1].
-
-## 📂 Estrutura do Projeto
+O projeto está organizado da seguinte maneira:
 
 ```text
 /
-├── forca.c              # Arquivo principal com a lógica do jogo (main)
-├── forca.h              # Cabeçalho com declaração de funções e constantes
-├── forca.exe            # Executável compilado (Windows)
-├── arquivos_dados/      # Base de dados das palavras
-│   ├── animais.txt
-│   ├── cores.txt
-│   ├── frutas.txt
-│   ├── paisescidades.txt
-│   └── profissoes.txt
+├── forca.c              # Código fonte principal (Main)
+├── forca.h              # Arquivo de cabeçalho (Protótipos e Constantes)
+├── forca.exe            # Executável do jogo
+├── animais.txt          # Banco de palavras: Animais
+├── cores.txt            # Banco de palavras: Cores
+├── frutas.txt           # Banco de palavras: Frutas
+├── paisescidades.txt    # Banco de palavras: Países e Cidades
+├── profissoes.txt       # Banco de palavras: Profissões
 └── README.md            # Documentação do projeto
